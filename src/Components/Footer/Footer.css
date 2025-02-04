@@ -1,0 +1,127 @@
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 8vw;
+    padding-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    width: 100%;
+    max-width: 1200px; /* Limit the maximum width for better alignment */
+}
+
+.footer-left, .footer-right, .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensure items align to the left */
+    gap: 20px;
+}
+
+.footer-left img.logo {
+    width: 50px; /* Adjust the size of the logo */
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #d9d9d9;
+    transform: translate(-100px);
+}
+
+.footer-right h2, .footer-center h2 {
+    color: white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff8c00; /* Add a subtle underline effect */
+    padding-bottom: 5px;
+}
+
+.footer-left ul, .footer-right ul, .footer-center ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-right li, .footer-center li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #d9d9d9;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-right li:hover, .footer-center li:hover {
+    color: #ff8c00; /* Add hover effect for links */
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: start; /* Align icons to the left */
+    margin-top: 10px;
+    margin-left: 90px;
+}
+
+.social-icons img {
+    width: 36px; /* Slightly smaller size for balance */
+    height: 36px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: #444; /* Add a subtle background */
+    padding: 8px; /* Ensure icons are not stretched */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Increase scaling for hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    filter: brightness(1.2); /* Make the icon brighter */
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center; /* Center icons on smaller screens */
+    }
+}
+
+
+hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #444;
+    width: 100%;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        text-align: center; /* Center align text for smaller screens */
+        gap: 40px;
+    }
+
+    .footer-left, .footer-right, .footer-center {
+        align-items: center; /* Center-align items */
+    }
+
+    .footer-left p {
+        text-align: center; /* Center-align paragraph text */
+    }
+}
